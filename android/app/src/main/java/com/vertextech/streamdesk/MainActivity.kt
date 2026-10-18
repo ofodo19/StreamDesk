@@ -15,7 +15,7 @@ import kotlin.concurrent.thread
 
 class MainActivity : Activity() {
     // Android emulator reaches the Windows host at 10.0.2.2. Change this for a deployed HTTPS API.
-    private val apiBase = "http://10.0.2.2:8787"
+    private val apiBase = "http://192.168.43.97:8787"
     private lateinit var list: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState); window.statusBarColor=Color.rgb(8,13,24); window.navigationBarColor=Color.rgb(8,13,24); buildUi(); loadCatalogue() }
     private fun buildUi() {
