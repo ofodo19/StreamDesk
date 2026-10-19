@@ -14,8 +14,8 @@ import java.net.URL
 import kotlin.concurrent.thread
 
 class MainActivity : Activity() {
-    // Android emulator reaches the Windows host at 10.0.2.2. Change this for a deployed HTTPS API.
-    private val apiBase = "http://192.168.43.97:8787"
+    // Deployed HTTPS API (PythonAnywhere). No trailing slash.
+    private val apiBase = "https://ofodo.pythonanywhere.com"
     private lateinit var list: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState); window.statusBarColor=Color.rgb(8,13,24); window.navigationBarColor=Color.rgb(8,13,24); buildUi(); loadCatalogue() }
     private fun buildUi() {
