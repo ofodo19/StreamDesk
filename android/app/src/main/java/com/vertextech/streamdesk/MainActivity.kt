@@ -2,6 +2,7 @@ package com.vertextech.streamdesk
 
 import android.app.Activity
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import android.graphics.Color
 import android.view.View
 import android.view.Gravity
@@ -17,7 +18,7 @@ class MainActivity : Activity() {
     // Deployed HTTPS API (PythonAnywhere). No trailing slash.
     private val apiBase = "https://ofodo.pythonanywhere.com"
     private lateinit var list: LinearLayout
-    override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState); window.statusBarColor=Color.rgb(8,13,24); window.navigationBarColor=Color.rgb(8,13,24); buildUi(); loadCatalogue() }
+    override fun onCreate(savedInstanceState: Bundle?) { installSplashScreen(); super.onCreate(savedInstanceState); window.statusBarColor=Color.rgb(8,13,24); window.navigationBarColor=Color.rgb(8,13,24); buildUi(); loadCatalogue() }
     private fun buildUi() {
         val scroll=ScrollView(this); val page=LinearLayout(this).apply { orientation=LinearLayout.VERTICAL; setPadding(28,28,28,28); setBackgroundColor(Color.rgb(8,13,24)) }
         page.addView(TextView(this).apply { text="STREAMDESK"; textSize=28f; setTextColor(Color.WHITE); setTypeface(null,1) })
